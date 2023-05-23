@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCalculadora.MainPage"
+             BackgroundColor="Beige">
+
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,.32" AbsoluteLayout.LayoutFlags="All"
+                       Padding="24,0" Spacing="0" HorizontalOptions="End" VerticalOptions="End">
+            <Label Padding="8,0" HorizontalOptions="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span x:Name="spnFirst" Text="" FontSize="36" TextColor="Blue" />
+                            <Span x:Name="spnSecond" Text="" FontSize="32" TextColor="Orange" />
+                            <Span x:Name="spnThird" Text="" FontSize="36" TextColor="Blue" />
+
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label x:Name="lblNumero" HorizontalOptions="End" Text="0" TextColor="Black"
+                    Margin="0,0,16,0" FontSize="84" FontAttributes="Bold"/>
+        </StackLayout>
+        <Frame AbsoluteLayout.LayoutBounds="0,1,1,.1" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional" 
+                BackgroundColor="Bisque"/>
+        <Frame AbsoluteLayout.LayoutBounds="0,.95,1,.62" AbsoluteLayout.LayoutFlags="SizeProportional, YProportional"
+               BackgroundColor="Bisque" HasShadow="False" CornerRadius="45">
+            <Grid AbsoluteLayout.LayoutBounds="0,1,1,.62" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional"
+                   RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*" Padding="10" RowSpacing="4"
+                   ColumnSpacing="4" >
+                <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="+"
+                            Background="Azure" Clicked="Btn_Sumar" />
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="0" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" Padding="4,0,0,4" FontSize="38" VerticalOptions="Fill" Text="-"
+                            Background="Azure" Clicked="Btn_Restar" />
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="0" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" Padding="2,0,0,8" FontSize="38" VerticalOptions="Fill" TextTransform="None" Text="x"
+                            Background="Azure" Clicked="Btn_Multiplicar" />
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="0" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="÷"
+                            Background="Azure" Clicked="Btn_Dividir" />
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="7"
+                            Background="Azure" Clicked="Click_Siete" />
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="8"
+                            Background="Azure" Clicked="Click_Ocho" />
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="9"
+                            Background="Azure" Clicked="Click_Nueve" />
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="1" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="25" VerticalOptions="Fill" Text="AC"
+                            Background="Azure" Clicked="Btn_AC" />
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="4"
+                            Background="Azure" Clicked="Click_Cuatro" />
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="5"
+                            Background="Azure" Clicked="Click_Cinco" />
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="6"
+                            Background="Azure" Clicked="Click_Seis" />
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="32" VerticalOptions="Fill" Text="C"
+                            Background="Azure" Clicked="Btn_C" />
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="3" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="1"
+                            Background="Azure" Clicked="Click_Uno" />
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="3" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="2"
+                            Background="Azure" Clicked="Click_Dos" />
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="3" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="3"
+                            Background="Azure" Clicked="Click_Tres" />
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="White" FontSize="38" VerticalOptions="Fill" Text="="
+                            Background="blue" Clicked="Btn_Igual" />
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="4" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" Padding="0,0,0,12" FontAttributes="Bold" FontSize="38" VerticalOptions="Fill" Text="←"
+                            Background="Azure" Clicked="Btn_Sumar" />
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="4" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" FontSize="38" VerticalOptions="Fill" Text="0"
+                            Background="Azure" Clicked="Click_Cero" />
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="4" Padding="0" Margin="12" CornerRadius="12" BackgroundColor="Azure">
+                    <Button TextColor="Black" Padding="0,0,0,12" FontSize="38" VerticalOptions="Fill" Text="."
+                            Background="Azure" Clicked="Click_Point" />
+                </Frame>
+            </Grid>
+        </Frame>
+    </AbsoluteLayout>
+</ContentPage>
